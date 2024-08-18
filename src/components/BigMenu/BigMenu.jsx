@@ -9,10 +9,10 @@ function BigMenu() {
 
 return (
    <div className="sm:px-28 px-5 py-7 flex justify-between items-center bg-white shadow-md ">
-    <div className="text-3xl font-semibold text-slate-800 flex justify-center items-center">
+    <Link to="/" className="text-3xl font-semibold text-slate-800 flex justify-center items-center">
       <img className="w-[40px]" src="/icon.png" alt="site-logo" />
       <p>-Store</p>
-    </div>
+    </Link>
 
     <nav className="space-x-8 md:flex hidden text-slate-800 font-semibold tracking-widest text-lg">
         <Link to="/">Home</Link>
