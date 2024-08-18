@@ -3,10 +3,10 @@ import { useStore } from "../../context/context";
 import { Link } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-
-
-
+AOS.init();
 
 function SearchCategory() {
     const [search, setSearch] = useState("")
@@ -49,7 +49,8 @@ console.log(product)
 
   return (
     <div>
-        <p className="text-center sm:text-3xl text-xl font-semibold mb-10">Search for Product by Category using (electronics, jewelery, men's clothing, women's clothing)</p>
+        <p className="text-center sm:text-3xl text-xl font-semibold mb-10"  data-aos="fade-left"
+            data-aos-duration="500">Search for Product by Category using (electronics, jewelery, men's clothing, women's clothing)</p>
         <form onSubmit={onSubmitSearch} className="flex justify-center items-center gap-2">
             <input type="text" className="py-2 pl-5 border border-black sm:w-[400px] w-[100%] outline-none" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search Products" />
             <button className="bg-blue-600 py-2 px-4 text-white" type="submit">Search</button>

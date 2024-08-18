@@ -92,7 +92,7 @@ useEffect(() =>{
     return <storeConext.Provider value={{
         isLoading,setIsLoading,isError,setIsError,store,setStore, showMenu, setShowMenu,
         changeMenu, changeMenuToFalse, sortBy, setSortBy,
-        sorteditems, filterCategory, filteredProducts, getCategory, categories, sorteditems
+        sorteditems, filterCategory, filteredProducts, getCategory, categories,
     }}>{children}</storeConext.Provider>
 }
 

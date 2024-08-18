@@ -5,13 +5,17 @@ import SortProducts from "../../components/SortProduct/SortProducts";
 import { useStore } from "../../context/context"
 import TypingEffect from '../../components/TypingEffect/TypingEffect'
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 function HomePage() {
 const {isLoading, isError,sorteditems} = useStore();
 
 // Calling Tpying Effect Function
 const text = TypingEffect("Trending and Latest Products");
-const text2 = TypingEffect("Newest Products");
+
 
 
   return (
@@ -22,7 +26,8 @@ const text2 = TypingEffect("Newest Products");
       <>
         <p className="font-semibold lg:text-4xl sm:text-3xl text-2xl text-center sm:mb-20 mb-10">{text}</p>
       <div className="pb-10 lg:flex lg:space-y-0 space-y-8 justify-between items-center gap-5 mx-auto"> 
-        <p className="text-center font-semibold text-2xl sm:text-3xl mb-7"> {text2}</p>
+        <p className="text-center font-semibold text-2xl sm:text-3xl mb-7" data-aos="fade-right"
+            data-aos-duration="500"> Newest Products</p>
         <SortProducts/>
       </div>
       <div>
