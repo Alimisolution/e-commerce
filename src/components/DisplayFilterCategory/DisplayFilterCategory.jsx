@@ -1,12 +1,11 @@
-import { Link } from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom';
 
-function ProductsList({product}) {
-    const {id,image, price, title, category,description} = product;
+function DisplayFilterCategory({products}) {
+    const {id,image, price, title, category,description} = products;
     
-    
-
   return (
-    <Link to={`/details/${id}`}>
+     <Link to={`/details/${id}`}>
         <div className='shadow-lg px-10 pb-3'>
             <img src={image} alt={title} className='sm:w-[350px] sm:h-[270px]' />
             <div className='pt-3'>
@@ -25,4 +24,4 @@ function ProductsList({product}) {
   )
 }
 
-export default ProductsList
+export default DisplayFilterCategory

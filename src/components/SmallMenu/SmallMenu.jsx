@@ -10,7 +10,8 @@ function SmallMenu() {
   <div className="h-screen bg-slate-800 text-white z-20 w-[100%] absolute top-0 left-0">
     <nav className="flex flex-col py-20 px-5 text-lg tracking-widest gap-3">
         <Link to="/">Home</Link>
-        <Link to="/store">Store</Link>
+        <Link to="/category">Category</Link>
+        <Link to="/searchCategory">Search Category</Link>
     </nav>
     
     <div onClick={changeMenuToFalse} className="font-bold text-2xl absolute top-5 right-8">
