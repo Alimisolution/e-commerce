@@ -1,12 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
+
+
 function DisplayFilterCategory({products}) {
     const {id,image, price, title, category,description} = products;
     
   return (
      <Link to={`/details/${id}`}>
-        <div className='shadow-lg px-10 pb-3'>
+        <div className='shadow-lg px-10 pb-3' data-aos="fade-right"
+            data-aos-duration="500">
             <img src={image} alt={title} className='sm:w-[350px] sm:h-[270px]' />
             <div className='pt-3'>
               <p className='font-semibold text-s'>{title.slice(0,20)}...</p>

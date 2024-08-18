@@ -60,7 +60,8 @@ console.log(product)
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16 py-10">
         {product.map(pro =>(
             <Link to={`/details/${pro.id}`} key={pro.id}>
-                <div className='shadow-lg px-10 pb-3'>
+                <div className='shadow-lg px-10 pb-3' data-aos="fade-right"
+            data-aos-duration="500">
                     <img src={pro.image} alt={pro.title} className='sm:w-[350px] sm:h-[270px]' />
                     <div className='pt-3'>
                     <p className='font-semibold text-s'>{pro.title.slice(0,20)}...</p>
