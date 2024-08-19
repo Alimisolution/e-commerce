@@ -10,6 +10,7 @@ export default function StoreProvider({children}){
     const [showMenu, setShowMenu] = useState(false)
     const [sortBy, setSortBy] = useState("fetch")
     const [selectedCategory, setSelectedCategory] = useState("All");
+    const [dark, setDark] = useState(false)
      let sorteditems;
 
 
@@ -29,7 +30,11 @@ export default function StoreProvider({children}){
     }
 
 
-
+    //Toggling the dark class mode
+    function TogglingDarkMode(){
+        document.body.classList.toggle('dark')
+        setDark(dark => !dark)
+    }
 
     //Fucntion fro fetching All Products
 async function fetchProducts(){
@@ -91,8 +96,8 @@ useEffect(() =>{
 //return all the fucntion, state to be use in a components that needs it
     return <storeConext.Provider value={{
         isLoading,setIsLoading,isError,setIsError,store,setStore, showMenu, setShowMenu,
-        changeMenu, changeMenuToFalse, sortBy, setSortBy,
-        sorteditems, filterCategory, filteredProducts, getCategory, categories,
+        changeMenu, changeMenuToFalse, sortBy, setSortBy, sorteditems, filterCategory,
+         filteredProducts, getCategory, categories, dark,TogglingDarkMode
     }}>{children}</storeConext.Provider>
 }
 

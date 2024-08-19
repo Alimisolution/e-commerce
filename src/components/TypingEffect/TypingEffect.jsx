@@ -7,7 +7,6 @@ function TypingEffect(testTyping) {
   useEffect(() => {
     const timer = setInterval(function () {
       setPosition((pos) => pos + 1);
-      console.log("interver");
       currentPosition.current += 1;
       if (currentPosition.current > testTyping.length) {
         clearInterval(timer);

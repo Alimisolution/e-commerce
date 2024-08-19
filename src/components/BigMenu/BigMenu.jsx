@@ -4,7 +4,8 @@ import { useStore } from "../../context/context"
 
 
 function BigMenu() {
-  const {changeMenu} = useStore()
+  const {changeMenu, dark,TogglingDarkMode} = useStore()
+
   
 
 return (
@@ -13,14 +14,14 @@ return (
       <img className="w-[40px]" src="/icon.png" alt="site-logo" />
       <p>-Store</p>
     </Link>
-
+  <button className="bg-black font-semibold text-white sm:text-lg text-sm rounded-md py-1 px-3" onClick={TogglingDarkMode}>{dark ? "Light" : "Dark"}</button>
     <nav className="space-x-8 md:flex hidden text-slate-800 font-semibold tracking-widest text-lg">
         <Link to="/">Home</Link>
         <Link to="/category">Category</Link>
         <Link to="/searchCategory">Search Category</Link>
 
     </nav>
-    <div className="font-bold text-xl md:hidden cursor-pointer" onClick={changeMenu}>
+    <div className={dark ? "font-bold text-xl md:hidden cursor-pointer text-black" : "font-bold text-xl md:hidden cursor-point text-black"} onClick={changeMenu}>
         <FaBars/>
     </div>
   </div>

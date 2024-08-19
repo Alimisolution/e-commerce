@@ -21,7 +21,7 @@ const text = TypingEffect("Details Overview");
 const {isLoading, setIsLoading} = useStore();
 
   //fetch  single product 
-async function fetchSingleProducts(id){
+async function fetchSingleProducts(){
     //set the loading state to true
     setIsLoading(true)
 
@@ -47,7 +47,7 @@ async function fetchSingleProducts(id){
 
   //call the fetchSingleProducts Fucntion inside useEffect
 useEffect(() =>{
-  fetchSingleProducts(id);
+  fetchSingleProducts();
 }, [])
 
 
