@@ -1,3 +1,5 @@
+#E-Store is a e-commerce platform(website) where peple can buy and order for clothes, electronics and many more from online.
+
 # How to use this app
 
 
