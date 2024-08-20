@@ -104,6 +104,6 @@ useEffect(() =>{
 
  export function useStore(){
     const context = useContext(storeConext)
-    return context
+    return context;
 }
 
